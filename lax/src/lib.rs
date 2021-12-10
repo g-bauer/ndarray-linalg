@@ -59,6 +59,9 @@
 //! [svddc]: svddck/trait.SVDDC_.html#tymethod.svddc
 //! [least_squares]: least_squares/trait.LeastSquaresSvdDivideConquer_.html#tymethod.least_squares
 
+#[cfg(feature = "accelerate")]
+extern crate accelerate_src as _src;
+
 #[cfg(any(feature = "intel-mkl-system", feature = "intel-mkl-static"))]
 extern crate intel_mkl_src as _src;
 

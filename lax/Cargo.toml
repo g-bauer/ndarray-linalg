@@ -15,9 +15,10 @@ categories    = ["algorithms", "science"]
 [features]
 default = []
 
-netlib    = ["netlib-static"]
-openblas  = ["openblas-static"]
-intel-mkl = ["intel-mkl-static"]
+accelerate = ["accelerate-src"]
+netlib     = ["netlib-static"]
+openblas   = ["openblas-static"]
+intel-mkl  = ["intel-mkl-static"]
 
 netlib-static = ["netlib-src/static"]
 netlib-system = ["netlib-src/system"]
@@ -33,6 +34,11 @@ thiserror = "1.0.24"
 cauchy = "0.4.0"
 num-traits = "0.2.14"
 lapack = "0.18.0"
+
+[dependencies.accelerate-src]
+version = "0.3.2"
+default-features = false
+optional = true
 
 [dependencies.intel-mkl-src]
 version = "0.6.0"
